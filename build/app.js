@@ -40,7 +40,7 @@ var RateForm = React.createClass({displayName: 'RateForm',
   },
   render: function() {
     return (
-      React.DOM.form({class: "rateForm", onSubmit: this.handleSubmit}, 
+      React.DOM.form({className: "rateForm", onSubmit: this.handleSubmit}, 
         React.DOM.input({type: "text", placeholder: "First Name", ref: "first"}), 
         React.DOM.input({type: "text", placeholder: "Last Name", ref: "last"}), 
         React.DOM.input({type: "submit", value: "Post"})
@@ -49,7 +49,7 @@ var RateForm = React.createClass({displayName: 'RateForm',
   }
 });
 
-var CommentBox = React.createClass({displayName: 'CommentBox',
+var BorrowerFunnel = React.createClass({displayName: 'BorrowerFunnel',
   getInitialState: function() {
     return {data: []};
   },
@@ -79,7 +79,6 @@ var CommentBox = React.createClass({displayName: 'CommentBox',
 });
 
 React.renderComponent(
-  CommentBox({url: "http://localhost:4567/apply", pollInterval: 2000}),
-  document.getElementById('content')
+  BorrowerFunnel({url: "http://localhost:4567/apply", pollInterval: 2000}),
+  document.getElementById('funnel')
 );
-

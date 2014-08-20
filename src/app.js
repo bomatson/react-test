@@ -40,7 +40,7 @@ var RateForm = React.createClass({
   },
   render: function() {
     return (
-      <form class='rateForm' onSubmit={this.handleSubmit}>
+      <form className='rateForm' onSubmit={this.handleSubmit}>
         <input type='text' placeholder='First Name' ref='first'/>
         <input type='text' placeholder='Last Name' ref='last'/>
         <input type='submit' value='Post' />
@@ -49,7 +49,7 @@ var RateForm = React.createClass({
   }
 });
 
-var CommentBox = React.createClass({
+var BorrowerFunnel = React.createClass({
   getInitialState: function() {
     return {data: []};
   },
@@ -79,7 +79,6 @@ var CommentBox = React.createClass({
 });
 
 React.renderComponent(
-  <CommentBox url='http://localhost:4567/apply' pollInterval={2000}/>,
-  document.getElementById('content')
+  <BorrowerFunnel url='http://localhost:4567/apply' pollInterval={2000}/>,
+  document.getElementById('funnel')
 );
-
