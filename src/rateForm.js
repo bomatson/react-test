@@ -1,20 +1,20 @@
 /** @jsx React.DOM */
 var RateForm = React.createClass({
   handleSubmit: function() {
-    var first = this.refs.first.getDOMNode().value.trim();
-    var last = this.refs.last.getDOMNode().value.trim();
+    var amount = this.refs.amount.getDOMNode().value.trim();
+    var purpose  = this.refs.purpose.getDOMNode().value.trim();
+    var creditScore  = this.refs.creditScore.getDOMNode().value.trim();
 
-    this.props.onRateSubmit({firstName: first, lastName: last})
+    this.props.onRateSubmit({amount: amount, purpose: purpose, creditScore: creditScore})
 
-    this.refs.first.getDOMNode().value = '';
-    this.refs.last.getDOMNode().value = '';
     return false;
   },
   render: function() {
     return (
       <form className='rateForm' onSubmit={this.handleSubmit}>
-        <input type='text' placeholder='First Name' ref='first'/>
-        <input type='text' placeholder='Last Name' ref='last'/>
+        <input type='number' placeholder='Loan Amount' ref='amount'/>
+        <input type='text' placeholder='Loan Purpose' ref='purpose'/>
+        <input type='text' placeholder='Credit Score' ref='creditScore'/>
         <input type='submit' value='Post' />
       </form>
     );
