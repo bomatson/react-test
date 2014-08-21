@@ -5,7 +5,10 @@ var RateForm = React.createClass({displayName: 'RateForm',
     var purpose  = this.refs.purpose.getDOMNode().value.trim();
     var creditScore  = this.refs.creditScore.getDOMNode().value.trim();
 
-    this.props.onRateSubmit({amount: amount, purpose: purpose, creditScore: creditScore})
+    this.props.onRateSubmit({
+      amount: amount,
+      purpose: purpose,
+      creditScore: creditScore})
 
     return false;
   },
