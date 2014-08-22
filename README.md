@@ -7,6 +7,8 @@ Check your rate with React!
     $ cd ..
     $ python -m SimpleHTTPServer 8000
 
+Go to [http://localhost:8000/template.html]()
+
 If you want to dev:
 
     $ npm install -g react-tools
