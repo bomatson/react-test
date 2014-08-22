@@ -30,6 +30,8 @@ var BorrowerFunnel = React.createClass({
     });
   },
   render: function() {
+        // a router would typically handle the behavior below:
+
         var page;
         switch (this.state.page) {
           case 1:
